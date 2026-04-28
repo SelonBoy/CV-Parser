@@ -4,12 +4,12 @@ import cv2
 import numpy as np
 import fitz
 
-def pdf_to_text(path)
+def pdf_to_text(path):
     doc = fitz.open(path)
     text = ""
     for page in doc:
         pix = page.get_pixmap()
-        img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)\
+        img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
         text += pytesseract.image_to_string(img)
     return text
 

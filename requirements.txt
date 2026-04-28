@@ -8,3 +8,5 @@ Pillow
 pytesseract
 easyocr
 gradio
+pymupdf
+pdf2image
